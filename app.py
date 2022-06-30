@@ -34,7 +34,6 @@ class Hello(Resource):
 
 class listOrderTypes(Resource):  
     def get(self):
-        json_data = request.get_json(force=True)
         response = jsonify(order_types=" orders fulfilled, orders online, backorders, storeorders, orders pickup")
         response.headers.add('Access-Control-Allow-Origin', '*')
         return response
