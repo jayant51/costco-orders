@@ -42,7 +42,7 @@ class listOrderTypes(Resource):
 
 # adding the defined resources along with their corresponding urls
 api.add_resource(Hello, '/init')
-api.add_resource(listOrderTypes, '/orders')
+api.add_resource(listOrderTypes, '/listOrderTypes')
 
 if __name__ == '__main__':
     port = os.environ.get('FLASK_PORT') or 8080
