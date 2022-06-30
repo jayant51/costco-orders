@@ -31,18 +31,13 @@ class Hello(Resource):
         return jsonify({'data': data}), 201
         #return data
   
-  
-# another resource to calculate the square of a number
-class Square(Resource):
-  
-    def get(self, num):
-        return jsonify({'square': num**2})
 
 class listOrderTypes(Resource):  
     def get(self):
         json_data = request.get_json(force=True)
-        orderTypes = 'orders fulfilled, orders online, backorders, storeorders, orders pickup'
-        return jsonify({'types=': orderTypes})
+        response = jsonify(order_types=" ** costco order types ** server is running")
+        response.headers.add('Access-Control-Allow-Origin', '*')
+        return response
 
 
 # adding the defined resources along with their corresponding urls
